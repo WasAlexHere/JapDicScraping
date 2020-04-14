@@ -2,17 +2,6 @@ from typing import Dict
 import requests
 from bs4 import BeautifulSoup
 import re
-import smtplib
-
-def send_mail():
-    server = smtplib.SMTP_SSL('smtp.gmail.com', 465)
-    server.ehlo()
-    server.login('malakhov.aleksei@gmail.com', '1qaz=[;.')
-    message = ('test')
-    server.sendmail('malakhov.aleksei@gmail.com', 'sethtorston@mail.ru', message)
-    server.quit()
-
-#send_mail()
 
 insert = input('Введите слово: ')
 payload = {'q':insert,'pg':'0','dic_jardic':'1','sw':'1920'}
